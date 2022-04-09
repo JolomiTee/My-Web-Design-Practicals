@@ -1,0 +1,517 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* HOVER BUTTON DESIGN: overflow and position corrected*/ 
+        /* body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            text-align: center;
+            margin-top: 200px;
+        }
+        .btn{
+            border: 1px solid #3498db;
+            background: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            cursor:pointer;
+            margin: 10px;
+            transition: 0.8s;
+            position: relative; 
+            overflow: hidden; 
+        }
+        .btn1,.btn2{
+            color: #3498db;
+
+        }
+        .btn3, .btn4{
+            color: #fff;
+        }
+        .btn1:hover, .btn2:hover{
+            color: #fff;
+        }
+        .btn3:hover, .btn4:hover{
+            color: #3498db;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: #3498db;
+            z-index: -1;
+            transition: 0.8s;
+        }
+        .btn1::before, .btn3::before{
+            top: 0;
+            border-radius: 0 0 50% 50%;
+        }
+        .btn2::before, .btn4::before{
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+        .btn3::before, .btn4::before{
+            height: 180%;
+        }
+        .btn1:hover::before, .btn2:hover::before{
+            height: 180%;
+        }
+        .btn3:hover::before, .btn4:hover::before{
+            height: 0%;
+        } */
+
+
+        /* .btn{
+            text-align: center;
+            margin-top: 360px;
+        }
+
+        .btn{
+            border: 1px solid #3498db;
+            background: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden; 
+            margin: 10px;
+            transition: 0.8s;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .btn-1, .btn-2{
+            color: #3498db;
+        }
+
+        .btn-3, .btn-4{
+            color: #fff;
+        }
+
+        .btn-1:hover, .btn-2:hover{
+            color: #fff;
+        }
+        .btn-3:hover, .btn-4:hover{
+            color: #3498db;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            z-index: -1;
+            transition: 0.8s;
+            background: #3498db;
+        }
+
+        .btn-1::before, .btn-3::before{
+            top: 0;
+            border-radius: 0 0 50% 50%;
+        }
+        .btn-2::before, .btn-4::before{
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .btn-3::before, .btn-4::before{
+            height: 180%;
+        }
+        .btn-1:hover::before, .btn-2:hover::before{
+            height: 180%;
+        }
+        .btn-3:hover::before, .btn-4:hover::before{
+            height: 0%;
+        } */
+
+
+        /* BATTERY CHARGE ANIMATION */
+        /* body{
+            background-color: #7ac489;
+        }
+
+        .battery{
+            height: 140px;
+            width: 325px;
+            border: 6px solid #103854;
+            border-radius: 10px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .top{
+            height: 70px;
+            width: 20px;
+            background-color: #103854;
+            position: relative;
+            left: 329px;
+            top: 35px;
+            vertical-align: middle;
+            border-radius: 0px 8px 8px 0px;
+
+        }
+
+        .charge1, .charge2, .charge3, .charge4{
+            height: 130px;
+            width: 75px;
+            background-color: #103854;
+            position: relative;
+            opacity: ;
+        }
+        .charge1{
+            bottom: 65px;
+            left: 5px;
+            animation: charge-1 3s infinite;
+
+        }
+        @keyframes charge-1{
+            25%, 100%{
+                opacity: 1;
+            }
+        }
+
+        .charge2{
+            bottom: 195px;
+            left: 85px;
+            animation: charge-2 3s infinite;
+        }
+        @keyframes charge-2{
+            0%, 25%{
+                opacity: 0;
+            }
+            50%, 100%{
+                opacity: 1;
+            }
+        }
+
+        .charge3{
+            bottom: 325px;
+            left: 165px;
+            animation: charge-3 3s infinite;
+        }
+        @keyframes charge-3 {
+            0%, 50%{
+                opacity: 0;
+            }
+            75%, 100%{
+                opacity: 1;
+            }
+        }
+
+        .charge4{
+            bottom: 455px;
+            left: 245px;
+            animation: charge-4 3s infinite;
+        }
+        @keyframes charge-4{
+            0%, 75%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        } */
+
+
+        /* COFFEE CUP ANIMATION */
+        /* body{
+            background-color: #efb54a;
+            margin: 0px;
+            padding: 0px;
+        }
+        .cup{
+            height: 140px;
+            width: 180px;
+            border: 6px solid #efb54a;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            border-radius: 0px 0px 60px 60px;
+            background: url(../images/cofee.png);
+            box-shadow: 0px 0px 0px 6px #ffffff;
+            animation: fill 4s infinite;
+            background-repeat: repeat-x;
+            background-position: 0px 140px
+        }@keyframes fill{
+            0%{
+                background-position: 0px 140px;
+            }
+            20%{
+                background-position: -450px 100px;
+            }
+            40%{
+                background-position: -900px 50px;
+            }
+            80%{
+                background-position: -1350px -40px;
+            }
+            100%{
+                background-position: 0px 140px;
+            }
+        }
+        .handle{
+            height: 70px;
+            width: 40px;
+            background-color: transparent;
+            border: 6px solid rgb(255, 255, 255);
+            position: relative;
+            left: 190px;
+            top: 5px;
+            border-radius: 0px 25px 80px 0px;
+        } */
+          
+
+        /* BUZZIN; log in page */
+        /* html{
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        *, *::before, *::after{
+            box-sizing: inherit;
+        }
+
+        body,h1,h2,h3{
+            margin: 0px;
+            padding: 0px;
+            font-weight: normal;
+
+        }
+
+        a{
+            text-decoration: none;
+        }
+        body{
+            background-color: #ecce6a96;
+            padding: 4rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main{
+            width: 100%;
+            background-color: #e0eaef;
+            box-shadow: 0 0 20 #b2c73e;
+        }
+        .top{
+            background-color: #7b23836e;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between ;
+        }
+
+        .logo{
+            padding-left: 20px;
+        }
+        .login{
+            padding-right: 40px;
+            padding-top: 20px;
+        }
+        .login input{
+            width: 200px;
+            height: 30px;
+            padding: 5px;
+            border: none;
+            float: left;
+            outline: none;
+
+        }
+        .login button{
+            outline: none;
+            float: left;
+            background-color: #6bc00a;
+            border: 1px solid #29487d;
+            color: white;
+            height: 30px;
+            width: 100px;
+            cursor: pointer;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            padding: 0px 0px 25px 0px;
+        }
+        h3{
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            padding: 0px 0px 140px 0px ;
+        }
+        img{
+            width: 300;
+            height: 180;
+            position: relative;
+            top: 20;
+        }
+
+        .signup{
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            position: relative;
+            top: -100px;
+            padding: 30px;
+        }
+
+        .signup h4{
+            color: gray;
+            font-size: 20px;
+        }
+
+        .signup .field{
+            margin-top: 30px;
+
+            position: relative;
+        }
+
+
+        .signup input{
+            display: block;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: gray;
+            border-bottom: 1px solid #999;
+            font-size: 1rem;
+        }
+        .signup button{
+            display: block;
+            width: 100%;
+            outline: none;
+            background-color: #6bc00a;
+            border: 1px solid #29487d;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 10px;
+
+        }
+        .signup .label{
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0%;
+            transition: 0.2s ease all;
+            color: #757575;
+        }
+
+        .signup input:focus ~ .label,
+        .signup input:not(:focus):valid ~ .label{
+            top: -17px;
+            font-size: .8rem;
+            opacity: 1;
+        } */
+    
+
+        /* POSITIONING */
+        /* body{
+            width: 100%;
+            background-color: antiquewhite;
+            
+        }
+        .sect1{
+            width: 100%;
+            height: 50%;
+            background-color: rgb(168, 145, 51);
+            padding-top: 100px;
+        }
+        .sect2{
+            width: 50%;
+            height: 2000px;
+            background-color: darkkhaki;
+            
+        }
+        .move{
+            width: 100%;
+            height: 10%;
+            background-color: chartreuse;
+            
+            position: sticky;
+            top: 10px;
+        } */
+
+    
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <button class="btn btn1">Hover Me</button>
+        <button class="btn btn2">Hover Me</button>
+        <button class="btn btn3">Hover Me</button>
+        <button class="btn btn4">Hover Me</button>
+    </div> -->
+    <!-- <div class="battery">
+        <div class="top"></div>
+        <div class="charge1"></div>
+        <div class="charge2"></div>
+        <div class="charge3"></div>
+        <div class="charge4"></div>      
+    </div>-->
+    <!-- <div class="cup">
+        <div class="handle"></div>
+    </div> -->
+    <!-- <div class="main">
+        <div class="top">
+            <div class="header">
+                <h1 class="logo">
+                    <a href=""><img src="../images/buzzin.png" alt="" height="100" width="100"></a>
+                </h1>
+                <div class="login">
+                    <form action="">
+                        <input type="email" placeholder="Email" required>
+                        <input type="password" placeholder="Password">
+
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <h2>Welcome to BUZZIN'</h2>
+            <h3>Akure's Own Social Network</h3>
+        </div>
+
+        <div class="signup">
+            <h4>SIGN UP</h4>
+            <form action="">
+                <div class="field">
+                    <input type="text" name="" id="" required>
+                    <span class="label">Your Full Name</span>
+                </div>
+
+                <div class="field">
+                    <input type="email" name="" id="" required>
+                    <span class="label">Your Email</span>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="" id="" required>
+                    <span class="label">Your Password</span>
+                </div>
+
+                <div class="field">
+                    <button class="button">Sign In</button>
+                </div>
+            </form>
+        </div>  
+    </div> -->
+    <!-- <section class="sect1">
+        <p>Here is text</p>
+    </section>
+
+    <section class="sect2">
+        <div class="move"></div>
+    </section> -->
+    
+</body>
+</html>

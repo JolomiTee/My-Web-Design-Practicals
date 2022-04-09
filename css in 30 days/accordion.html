@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        .accordion{
+            position: relative;
+            width: 500px;
+            display: block;
+            background: white;
+            /* color: #e0e0e0; */
+            border: solid 1px #e0e0e0;
+        }
+        .accordion .accordion-item{
+            display: block;
+        }
+        .accordion .accordion-content{
+            display: block;
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease, padding 0.3s linear;
+        }
+        .accordion .accordion-content p{
+            padding: 20px;
+            margin: 0;
+        }
+        .accordion .accordion-content:target{
+            height: 100px;
+
+        }
+        .accordion .accordion-trigger{
+            text-decoration: none;
+        }
+        .accordion .accordion-title{
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 10px;
+            font-size: 1em;
+            background: #034e4e;
+            color: white;
+            border: 1px #379114;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgb(167, 167, 109) inset, 0 4px 0 #338a94;
+        }
+        .accordion .accordion-title:hover{
+            background-color: #0bbfc0;
+        }
+        .accordion .accordion-title::after{
+            position: absolute;
+            content: "";
+            right: 20px;
+            top: calc(50% - 7px);
+            width: 7px;
+            height: 7px;
+            border-left: solid 2px white;
+            border-bottom: solid 2px white;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h4>CSS 3 Accordion</h4>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <a href="#tab1" class="accordion-trigger accordion-title">Accordion 1</a>
+                <div class="accordion-content" id="tab1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut, mollitia fuga repellat, omnis nihil cupiditate maxime, eum eligendi laboriosam iure adipisci nostrum ipsum architecto ab. Temporibus quaerat omnis pariatur.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a href="#tab2" class="accordion-trigger accordion-title">Accordion 2</a>
+                <div class="accordion-content" id="tab2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut, mollitia fuga repellat, omnis nihil cupiditate maxime, eum eligendi laboriosam iure adipisci nostrum ipsum architecto ab. Temporibus quaerat omnis pariatur.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a href="#tab3" class="accordion-trigger accordion-title">Accordion 1</a>
+                <div class="accordion-content" id="tab3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut, mollitia fuga repellat, omnis nihil cupiditate maxime, eum eligendi laboriosam iure adipisci nostrum ipsum architecto ab. Temporibus quaerat omnis pariatur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

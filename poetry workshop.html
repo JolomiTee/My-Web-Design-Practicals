@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>poetry workshop</title>
+        <link href="./css/poetry css.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Poetry Workshop</h1>
+        <p class="first para">we will be conducting a number of poetry workshops and symposium throughout the year.</p>
+        <p class="second para">Please note that the following events are free to members:</p>
+        <ul class="first ul">
+            <li>A Poetic  Perspective</li>
+            <li>Walt Whitman at War</li>
+            <li>Found Poems and Outsider Poetry</li>
+        </ul>
+        <br />
+        <table class="first table">
+            <tr class="row header">
+                <th></th>
+                <th>New York</th>
+                <th>Chicago</th>
+                <th>San Francisco</th>
+            </tr>
+            <tr class="little color">
+                <th>A Poetic Perspective</th>
+                <td>Sat, 4 Feb 2012 11am - 2pm</td>
+                <td>Sat, 3 Mar 2012 11am-2pm</td>
+                <td>Sat, 17 Mar 2012 11am-2pm</td>
+            </tr>
+            <tr class="more color">
+                <th>Walt Whitman at War</th>
+                <td>Sat, 7 Apr 2012 11am-1pm</td>
+                <td>Sat, 5 May 2012 11am-1pm</td>
+                <td>Sat, 19 May 2012 11am-1pm</td>
+            </tr>
+            <tr class="little color">
+                <th>Found Poems & Outside Poetry</th>
+                <td>Sat, 9 Jun 2012 11am-2pm</td>
+                <td>Sat, 7 Jul 2012 11am-2pm</td>
+                <td>Sat, 21 Jul 2012 11am-2pm</td>
+            </tr>
+            <tr class="more color">
+                <th>Natural Death: An Explanation</th>
+                <td>Sat, 4 Aug 2012 11am-4pm</td>
+                <td>Sat, 8 Sep 2012 11am-4pm</td>
+                <td>Sat, 15 Sep 2012 11am-4pm</td>
+            </tr>
+        </table>
+        <br />
+        <form class="first form" action="poetry workshop.html" method="get">
+            <fieldset>
+                <legend>Register your interest</legend>
+                <p><label class="title" for="name">Your Name:</label>
+                    <input type="text" name="name" id="name"><br />
+                    <label class="title" for="email">Your Email:</label>
+                    <input type="email" for="email" id="email"><br /> 
+                </p>
+                <p><label for="location" class="title">Your closest center:</label>
+                    <select name="location" id="location">
+                        <option value="ny">New York</option>
+                        <option value="ch">Chicago</option>
+                        <option value="snf">San Francisco</option>
+                    </select>
+                </p>
+                    <span class="radio">Are you a member?</span>
+                    <label><input type="radio" name="member" value="yes">Yes</label>
+                    <label><input type="radio" name="member" value="no">No</label> 
+                </p>
+            </fieldset>
+            <div class="submit"><input type="submit" name="submit" value="Register"></div>
+        </form>
+    </body>
+</html>

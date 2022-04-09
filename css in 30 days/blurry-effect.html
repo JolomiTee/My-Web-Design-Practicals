@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurry Images</title>
+    <style>
+        body{background: darkgrey;}
+        img{
+            display: block;
+            margin-top: 20px;
+            width: 256px;
+            height: 226px;
+        }
+        .depth-gallery{
+            position: relative;
+            display: inline-block;
+            width: 40%;
+        }
+        .depth-gallery img{
+            border: solid 8px #fff;
+            box-shadow: 00 5px blur rgba(0, 0, 0, .3);
+            cursor: pointer;
+            transition: filter 0.5s linear, transform .3s linear;
+        }
+        .depth-gallery:hover img{
+            filter: blur(2px);
+            transform: scale(0.9);
+        }
+        .depth-gallery img:hover{
+            filter: blur(0);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h4>Example</h4>
+        <div class="depth-gallery">
+            <img src="../images/fd3.jpeg" alt="Food 1">
+            <img src="../images/fd4.jpeg" alt="Food 3">
+            <img src="../images/fd5.jpeg" alt="Food %">
+            <img src="../images/fd6.jpeg" alt="Food 6">
+        </div>
+    </section>
+</body>
+</html>

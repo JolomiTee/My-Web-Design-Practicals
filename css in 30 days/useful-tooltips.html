@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful Tooltips</title>
+    <style>
+        .tooltip{
+            position: relative;
+            height: 60px;
+            width: 250px;
+            background: #f2395a;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-size: 18px;
+            margin: 0 auto;
+        }
+        .tooltip:hover::before,
+        .tooltip:hover::after{
+                display: inline-block;
+            }
+
+            .tooltip::before{
+                position: absolute;
+                z-index: 2;
+                content: attr(title);
+                display: none;
+                width: 200px;
+                padding: 10px;
+                font-size: .8em;
+                line-height: 1.4em;
+                border-radius: 5px;
+                background-color: rgba(23, 230, 102, 0.8);
+                color: rgb(155, 104, 10);
+            }
+            
+            .tooltip::after{
+                position: absolute;
+                z-index: 1;
+                display: none;
+                width: 0;
+                height: 0;
+                border: 5px solid transparent;
+                content: "";
+            }
+
+
+            .tooltip.top::before{
+                bottom: calc(100% + 5px);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .tooltip.top::after{
+                bottom: 100%;
+                left: 50%;
+                border-top-color: rgba(23, 230, 102, 0.8);
+                border-bottom-width: 0;
+                transform: translateX(-50%);
+            }
+
+
+            .tooltip.right::before{
+                top: 50%;
+                left: calc(100% + 5px);
+                transform: translateY(-50%);
+            }
+            .tooltip.right::after{
+                top: 50%;
+                left: 100%;
+                border-right-color: rgba(23, 230, 102, 0.8);
+                border-left-width: 0;
+                transform: translateY(-50%);
+            }
+            
+
+            .tooltip.bottom::before{
+                top: calc(100% + 5px);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .tooltip.bottom::after{
+                top: 100%;
+                left: 50%;
+                border-bottom-color: rgba(23, 230, 102, 0.8);
+                border-top-width: 0;
+                transform: translateX(-50%);
+            }
+
+            .tooltip.left::before{
+                right: calc(100% + 5px);
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .tooltip.left:after{
+                right: 100%;
+                border-left-color: rgba(23, 230, 102, 0.8);
+                border-right-width: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+
+    </style>
+</head>
+<body>
+    <div class="sandbox">
+        <h2>Sandbox</h2>
+        <section>
+            <h4>Tooltips on top</h4>
+            <div class="tooltip top" title="Tooltip on top">
+                Hover Me
+            </div>
+        </section>
+
+        <section>
+            <h4>Tooltips on right</h4>
+            <div class="tooltip right" title="tooltip on right">
+                Hover Me
+            </div>
+        </section>
+        
+        <section>
+            <h4>Tooltips on bottom</h4>
+            <div class="tooltip bottom" title="tooltip on bottom">
+                Hover Me
+            </div>
+        </section>
+
+        <section>
+            <h4>Tooltips on left</h4>
+            <div class="tooltip left" title="tooltip on left">
+                Hover Me
+            </div>
+        </section>
+    </div>
+</body>
+</html>

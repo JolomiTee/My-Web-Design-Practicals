@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broken Images</title>
+    <style>
+        .image{
+            position: relative;
+            display: inline-block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 40px;
+        }
+
+        .image::after{
+            display: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-width: 200px;
+            padding: 10px 20px 10px 54px;
+            border: 1px dashed #888;
+            background-color: #f0f0f0;
+            background-image: url('noimage.png');
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: 15px 15px;
+            z-index: 1;
+            content: "" attr(alt) " img Not Found";
+        }
+    </style>
+</head>
+<body>
+     <div class="final">
+         <h4>Example of a broken image</h4>
+         <div class="content">
+             <section>
+                 <img class="image" src="../images/,l.jpg" alt="Beautiful Forest"> <br>
+                 <img class="image" src="../images/,2.jpg" alt="fine food">
+             </section>
+         </div>
+     </div>
+</body>
+</html>

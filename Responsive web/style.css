@@ -1,0 +1,259 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: cursive;
+    max-zoom: 100;
+    /* width: 720px; */
+}
+ /* remove background colors */
+header{
+    display: flex;
+    width: 800px;
+    margin: auto;
+    height: 150px;
+    align-items: center;
+}
+main{
+    width: 1080x;
+    align-items: center;
+    display: flex;
+}
+.logo-container, .cart, .nav-links{
+    display: flex;
+}
+.logo-container{
+    /* background: lightblue; */
+    flex: 1;
+    float: left;
+}
+.logo{
+    font-weight: 100;
+    margin: 30px 0px 0px 0px;
+}
+
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+   
+}
+.nav-link{
+    text-decoration: none;
+}
+nav{
+    /* background: rgb(173, 230, 221); */
+    flex: 2;
+}
+.cart{
+    /* background: rgb(179, 173, 230); */
+    flex: 1;
+    justify-content: flex-end;
+}
+.presentation{
+    position: relative;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 300px;
+    align-items: center;
+}
+/* 
+.presentation2{
+    display:block;
+    width: 90%;
+    margin: auto;
+    min-height: 300px;
+    align-items: center;
+} */
+.introduction{
+    /* background: lightblue; */
+    flex: 1;
+}
+.intro-text h1{
+    font-size: 44px;
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    background: linear-gradient(to right, rgb(81, 83, 158),  rgb(48, 70, 90),  rgb(55, 0, 255) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+    margin-top: 5px;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+.cover img{
+    height: 100%;
+    width: 450px;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 0.5s ease
+
+}
+.cover{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.big-circle{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+    height: 80%;
+}
+
+.mid-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    height: 60%;
+    opacity: 0.4;
+
+}
+
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    right: 52%;
+    z-index: -1;
+    opacity: 1.2;
+}
+
+
+@keyframes drop {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    20%{
+        opacity: 0.2;
+        transform: translateY(-80px);
+    }
+    40%{
+        opacity: 0.4;
+        transform: translateY(-60px);
+    }
+    60%{
+        opacity: 0.6;
+        transform: translateY(-40px);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px ;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translateY(50%, 5%);
+    }
+    .cover img{
+        height: 80%;
+    }
+    .small-circle, .mid-circle, .big-circle{
+        opacity: 0.2 ;
+    }
+
+}
+.laptop-select{
+    position: relative;
+    bottom: -10%;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    right: 13%;}
+
+
+    
+.btn{
+    padding: 50px 0px 0px 0px;
+}
+button{
+    margin: 7px;
+    border-radius: 10px ;
+    transition: 0.5s;
+    background: none;
+    font-family: Arial, Helvetica, sans-serif;}
+    
+.btn-1, .btn-2{
+    border: 2px solid #c36ccb;
+    background: transparent;
+    color: #c36ccb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-3, .btn-4{
+    border: none;
+    border: 2px solid #c36ccb;
+    color: rgb(241, 239, 239);
+    width: 150px;
+    font-size: 16px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* .btn-3, .btn-4{
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #c36ccb;
+    width: 150px;
+    font-size: 16px;
+    height: 50px;
+    cursor: pointer;
+} */
+
+.btn-1:hover, .btn-2:hover{
+    color: #fff;
+}
+
+.btn-3:hover, .btn-4:hover{
+    color: #e92604;
+}
+
+btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    background: #3498db;
+}
+

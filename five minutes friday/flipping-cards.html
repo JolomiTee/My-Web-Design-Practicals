@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Card</title>
+    <style>
+        *, *::before, *::after{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .card{
+            width: 400px;
+        }
+        .card:hover .card-content{
+            transform: rotateY(.5turn);
+        }
+        
+        .card-content{
+            text-align: center;
+            position: relative;
+            padding: 5em;
+            transition: transform 3s;
+            background: blue;
+            transform-style: preserve-3d;
+        }
+        .card-front, .card-back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2em;
+        }
+
+        .card-front{
+            background: red;
+            transform: rotateY(.25turn);
+        }
+        .card-title{
+            transform: translateZ(200px);
+            font-size: 3rem;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <div class="card-front">
+                <h3 class="card-title">The Fair</h3>
+                <p class="clard-subtitle">Time for some fun</p>
+            </div>
+
+            <div class="card-back">
+                <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

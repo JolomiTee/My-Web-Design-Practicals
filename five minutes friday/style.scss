@@ -1,0 +1,27 @@
+@mixin ls($spacing: 20px) {
+    letter-spacing: $spacing;
+    margin-right: -$spacing;
+}
+*{
+    font-family: Philosopher;
+}
+.title{
+    text-align: right;
+    margin: 0 0 .5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 7rem;
+    color: #ee6352;
+    line-height: 1;
+
+   
+}
+span{
+    font-weight: 100;
+    @include ls(30px);
+    font-style: normal;
+}
+p{
+    color: red;
+}

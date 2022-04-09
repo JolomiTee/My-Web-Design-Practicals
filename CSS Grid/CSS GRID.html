@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 1</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 70% 30% ;
+            column-gap: 2px;
+            row-gap: 2px;
+            /* same as using the shorthand: */
+            gap: 5px 2px;
+        }
+        .wrapper{
+            background: lightgray;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: rgb(202, 181, 181);
+        }
+        div{
+            border: 1px solid black;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam autem veniam vel voluptatum, quia suscipit facere voluptates debitis. Perspiciatis vitae adipisci aspernatur in labore animi ut repudiandae nobis iste qui porro voluptates dolor ipsam facere, quis sit nisi placeat. Ea exercitationem veritatis laboriosam quod? Neque debitis eveniet molestiae vel voluptate possimus harum atque quasi, assumenda soluta inventore dolore eaque doloremque iure. Atque veritatis sunt a facere molestiae sed veniam? Laboriosam eius ipsum officiis animi atque mollitia. Eum recusandae incidunt rerum?
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam autem veniam vel voluptatum, quia suscipit facere voluptates debitis. Perspiciatis vitae adipisci aspernatur in labore animi ut repudiandae nobis iste qui porro voluptates dolor ipsam facere, quis sit nisi placeat. Ea exercitationem veritatis laboriosam quod? Neque debitis eveniet molestiae vel voluptate possimus harum atque quasi, assumenda soluta inventore dolore eaque doloremque iure. Atque veritatis sunt a facere molestiae sed veniam? Laboriosam eius ipsum officiis animi atque mollitia. Eum recusandae incidunt rerum?
+        </div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, nesciunt doloremque repellendus odit velit sapiente magnam, unde hic laborum fugit temporibus dolorum dolorem doloribus. Nobis minima fugiat libero sed beatae.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam autem veniam vel voluptatum, quia suscipit facere voluptates debitis. Perspiciatis vitae adipisci aspernatur in labore animi ut repudiandae nobis iste qui porro voluptates dolor ipsam facere, quis sit nisi placeat. Ea exercitationem veritatis laboriosam quod? Neque debitis eveniet molestiae vel voluptate possimus harum atque quasi, assumenda soluta inventore dolore eaque doloremque iure. Atque veritatis sunt a facere molestiae sed veniam? Laboriosam eius ipsum officiis animi atque mollitia. Eum recusandae incidunt rerum?
+        </div>
+
+        
+    </div>
+</body>
+</html>

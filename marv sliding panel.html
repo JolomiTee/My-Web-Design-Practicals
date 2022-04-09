@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Panel</title>
+    <style>
+
+
+/* i'll try to explain this as much as i can */
+/* one thing you should also do is to comment out some code you dont understand and see how that affects the browser */
+
+        .slide{
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            /* the overflow: hidden property causes the slide content to not show on the screen but it will be brought back */
+        }
+        .slide img{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        /* if you notice, its the slide content that has more properties than others because its the main target of the sliding in thing i want you to do */
+        .slide-content{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            /* this top bottom left right makes the slide-content occupy all the space within its container */
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            /* displaying flex allows you use the align-items, justify-content properties efficiently */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: rgba(225, 35, 69, 0.8);
+            padding: 20px;
+            color: white;
+            box-sizing: border-box;
+            transition: transform .3s ease;
+            /* i dont know if youve done transitions before but it is to animate the way the text slides in...it animates the transform property below, gives it a duration 3 milliseconds and ease function is like making it happen smoothy */
+        }
+
+        
+        .slide-top .slide-content{
+            transform: translate( 0, -100%);
+            /* this one here is the custom propr=erty for the transition, about that box i told you about, it will follow these 0,100, 100, 0, 100,100 and so on nd so forth */
+        }
+        .slide-bottom .slide-content{
+            transform: translate(0, 100%);
+        }
+        .slide-left .slide-content{
+            transform: translate(100%, 0 );
+        }
+        .slide-right .slide-content{
+            transform: translate(-100%, 0);
+        }
+
+
+        .slide:hover .slide-content{
+            transform: translate(0, 0);
+        }
+    </style>
+</head>
+<body>
+    <section>
+
+        <!-- you can change the clsses ive put to your own custom classes, and the imagess too -->
+        <h4>SLide from the Top</h4>
+        <!-- this div has a div in it which is the sliding that taht will appear on hover -->
+        <div class="slide slide-top">
+            <div class="slide-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, similique!</div>
+            <img src="" alt="">
+        </div>
+    </section>
+    <section>
+        <h4>SLide from the left</h4>
+        <div class="slide slide-left">
+            <div class="slide-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, similique!</div>
+            <img src="" alt="">
+        </div>
+    </section>
+    <section>
+        <h4>SLide from the bottom</h4>
+        <div class="slide slide-bottom">
+            <div class="slide-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, similique!</div>
+            <img src="" alt="">
+        </div>
+    </section>
+    <section>
+        <h4>SLide from the right</h4>
+        <div class="slide slide-right">
+            <div class="slide-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, similique!</div>
+            <img src="" alt="">
+        </div>
+    </section>
+</body>
+</html>

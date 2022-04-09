@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REG Form</title>
+    <style>
+        .reg-wrapper{
+            background-image: -webkit-linear-gradient(135deg, #0eeff0 30%, #088f90 90%);
+            background-image:linear-gradient(135deg, #0eeff0 30%, #088f90 90%);
+            position: relative;
+            z-index: 3;
+            padding: 100px;
+            color: #999;
+            font-size: 1rem;
+        }
+        .reg-wrapper *{
+            box-sizing: border-box;
+
+        }
+        .reg-wrapper form input{
+            display: inline-block;
+            width: 100%;
+            padding: 0 20px;
+            line-height: 50px;
+            height: 50px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-bottom-width: 3px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        .reg-wrapper form input:not(:last-child){
+            margin-bottom: 20px;
+        }
+        .reg-wrapper form input[type='email']:focus,
+        .reg-wrapper form input[type='email']:active,
+        .reg-wrapper form input[type='password']:focus,
+        .reg-wrapper form input[type='password']:active{
+            border-color: #ccc;
+        }
+        .reg-wrapper form input[type="submit"]{
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            padding: 0 20px;
+            background-color: #f23958;
+            color: #fff;
+            background-size: 20px 20px;
+            background: linear-gradient(
+                                        45deg, 
+                                        rgba(238,174,202,1) 0%, 
+                                        rgba(207,29,202,1) 10%, 
+                                        rgba(68,21,202,1) 30%, 
+                                        rgb(70, 112, 202) 40%, 
+                                        rgba(95,30,202,1) 50%, 
+                                        rgba(176,248,202,1) 90%, rgba(165,205,202,1) 100%);
+            border: 1px solid #f02146;
+            border-bottom-width: 3px;
+            outline: none;
+            cursor: pointer;
+            transition: all 2s ease-in
+        }
+        .reg-wrapper form input[type="submit"]:hover{
+            background-size: 130%;
+        }
+        .reg-title{
+            font-size: 1.6rem;
+            padding-bottom: 20px;
+            margin: 0 0 20px;
+            border-bottom: dashed 1px #e6e6e6;
+        }
+        .reg-block{
+            position: relative;
+            display: block;
+            width: 300%;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+            border-radius: 5px;
+        }
+            .reg-block::before, .reg-block::after{
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background: #fff
+                ;
+                border: 1px solid #e6e6e6;
+                border-radius: 5px;
+                -webkit-transform: scale(.9) translate(0,0);
+                    transform: scale(.9) translate(0,0);
+                    transition: all .6s ease;
+            }
+            .reg-block::after{
+                transition-delay: 0.1s;
+            }
+            .reg-block:hover::before{
+                transform: scale(.96) translate(0px, 16px);
+                z-index: -1;
+            }
+            .reg-block:hover::after{
+                transform: scale(.92) translate(0px, 32px);
+                z-index: -2;
+            }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="reg-wrapper">
+            <div class="reg-block">
+                <h3 class="reg-title">Create an Account</h3>
+                <p>Quickly &amp; easily create an account using the form below.</p>
+                <form action="">
+                    <input type="email" placeholder="Enter your Email"> 
+                    <input type="password" placeholder="Enter your Password"> 
+                    <input type="submit" value="Create my account">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

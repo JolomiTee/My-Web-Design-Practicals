@@ -1,0 +1,95 @@
+* {
+  font-family: Philosopher;
+}
+
+.title {
+  text-align: right;
+  margin: 0 0 .5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 7rem;
+  color: #ee6352;
+  line-height: 1;
+}
+
+span {
+  font-weight: 100;
+  letter-spacing: 30px;
+  margin-right: -30px;
+  font-style: normal;
+}
+
+p {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
+
+.container{
+  width: 100vw;
+  height: 100vh;
+}
+
+.one{
+  width: 200px;
+  height: 200px;
+  background: #3dccc7;
+  margin: 2px;
+  transition-property: all;
+  transition-delay: 250ms;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+  
+}
+
+.one:hover{
+  width: 500px;
+  background: red;
+  transform: rotate(45deg);
+}
+.two{
+  width: 200px;
+  height: 200px;
+  background: #3dccc7;
+  margin: 2px;
+  transition-property: all;
+  transition-delay: 250ms;
+  transition-duration: 3s;
+  transition-timing-function: ease-in;
+}
+
+.two:hover{
+  width: 500px;
+  background: red;
+}
+.three{
+  width: 200px;
+  height: 200px;
+  background: #3dccc7;
+  margin: 2px;
+  transition-property: all;
+  transition-delay: 250ms;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+}
+
+.three:hover{
+  width: 500px;
+  background: red;
+}
+.four{
+  width: 200px;
+  height: 200px;
+  background: #3dccc7;
+  margin: 2px;
+  transition-property: all;
+  transition-delay: 250ms;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+}
+
+.four:hover{
+  width: 500px;
+  background: red;
+}
