@@ -1,0 +1,207 @@
+/* *{
+    margin: 0;
+    padding: 0;
+
+} */
+
+/* h1{
+    color: green;
+} */
+body{
+    background-color: #d4b8b8;
+    color: #555555;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    /* font: normal 16px monospace; shorthanded for weight, size and family */
+    line-height: 1.6em;
+    margin: 0%;
+    
+}
+a{
+    text-decoration: none;
+    color: crimson;
+}
+
+a:hover{
+    color: rgb(68, 0, 255);
+}
+
+a:active{
+    color: rgb(32, 192, 17);
+}
+a:visited{
+    color: gold;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+.clr{
+    clear: both;
+}
+.box1{
+    background-color: #333;
+    color: #fff;
+    /*border-top: 5px red solid;
+    border-bottom: 10px rebeccapurple solid;
+    border-left: 9px green solid;
+    border-right: 13px black solid; */
+    
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style:dotted ;
+
+    border: 10px red solid ;
+
+    padding-top: 20px ;
+    padding-bottom: 10px ;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    /* same as above */
+    padding: 20px 20px 0px 20px;
+    /* or */
+    padding: 20px;
+
+    margin-top: 20px;
+    margin: 20px 0px;
+}
+
+.box1 h1{
+    font-family: monospace;
+    font-style: italic;
+    font-weight: 800;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+}
+
+.box2{
+    border: 3px lightgray dotted;
+    padding: 20px;
+    margin: 20px 0;
+}
+.categories{
+    border: 1px lightgray solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+.categories h2{
+    text-align: center;
+}
+.categories ul{
+    padding-left: 100px;
+    list-style: none;
+}
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    list-style-image: url(../../images/noaabullet.gif);
+}
+.myform{
+    padding: 20px;
+
+}
+.myform .form-group{
+    padding-bottom: 10px;
+}
+
+.myform label{
+    display: block;
+}
+.myform input[type="text"], .myform input[type="email"], .myform textarea {
+    padding: 8px;
+    width: 100%;
+}
+.button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    width: 50%;
+    margin: 0px 0px 0px 0px;
+}
+.submit{
+    margin: 100px;
+}
+.block{
+    float: left;
+    width: 33.3%;
+    /* making width 32.3 and border 1px makes 33.3, which should allow a fit */
+    color: white;
+    border: 1px solid #294229;
+    padding: 10px;
+    /* alternatively, box sizing can be used */
+    box-sizing: border-box;
+
+
+}
+
+#mainblock{
+    float: left;
+    width: 60%;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    color: white;
+    background-color: cornflowerblue;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.pbox{
+    width: 800px;
+    height: 500px;
+    border: 1px solid #454;
+    margin: 10px;
+    position: relative;
+    background-image: url(../../images/R.jfif);
+    background-position: -500px -200px;
+    /* background-position: center top; percentages can also be used */
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+
+}
+.pbox h1{
+    position: relative;
+    top: 200px;
+    left: 100px;
+}
+.pbox h2{
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+}
+.fixme{
+    position: fixed;
+    top: 40px;
+    width: 60px;
+}
+
+.mylist{
+    color: white;
+}
+.mylist li:first-child{
+    background-color: red;
+}
+
+.mylist li:last-child{
+    background-color: blue;
+}
+
+.mylist li:nth-child(5){
+    background-color: rgb(115, 255, 0);
+    border-radius: 200px;
+    
+}
+.mylist li:nth-child(even){
+    background-color: #333;
+    border-radius: 200px;
+}
+
+.mylist li:nth-child(odd){
+    background-color: rgb(145, 12, 12);
+    border-radius: 200px;
+}

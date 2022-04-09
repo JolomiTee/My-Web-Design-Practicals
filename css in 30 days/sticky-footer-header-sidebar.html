@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky</title>
+</head>
+<style>
+    html, body{
+        height: 100%;
+        margin: 0;
+    }
+    body.sticky-header-b{
+        margin-top: 200px;
+
+    }
+    .sticky-header{
+        background: rgba(242, 57, 90, .9);
+        position: fixed;
+        top: 0;
+        height: 180px;
+        width: 100%;
+
+        z-index: 99;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+    .sticky-header h1{
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin: 0 auto;
+        text-transform: uppercase;
+        color: #f2395a;
+        margin-left: 100px;
+        -webkit-transform: skew(-10deg, -10deg) rotate(5deg);
+                transform: skew(-10deg, -10deg) rotate(5deg);
+        -webkit-transform-origin: center center;
+                transform-origin: center center;
+        text-shadow: 1px 1px #d10e10,
+                    2px 2px #d10e10,
+                    3px 3px #d10e10,
+                    4px 4px #d10e10,
+                    5px 5px #d10e10,
+                    6px 6px #d10e10,
+                    7px 7px #d10e10,
+                    8px 8px #890920,
+                    9px 9px #890920,
+                    10px 10px #890920,
+                    11px 11px 15px rgba(0, 0, 0, .5);
+    }
+    .sticky-header h1 small{
+        font-size: 2rem;
+        /* font-size: 6rem; */
+        text-transform: uppercase;
+        color: #cfbec1;
+        margin-left: 100px;
+        -webkit-transform: skew(-10deg, -10deg) rotate(5deg);
+                transform: skew(-10deg, -10deg) rotate(5deg);
+        -webkit-transform-origin: center center;
+                transform-origin: center center;
+        text-shadow: 1px 1px #d10e10,
+                    2px 2px #d10e10,
+                    3px 3px #d10e10,
+                    4px 4px #d10e10,
+                    5px 5px #d10e10,
+                    6px 6px #d10e10,
+                    7px 7px #d10e10,
+                    8px 8px #890920,
+                    9px 9px #890920,
+                    10px 10px #890920,
+                    11px 11px 15px rgba(0, 0, 0, .5);
+    } 
+
+    .page-content{
+        min-height: 80%;
+        font-size: 1.4rem;
+        
+    }
+    .page-content::after{
+        display: table;
+        content: "";
+        clear: both;
+
+    }
+
+    small, h1, h4{
+        display: block;
+        
+    } 
+    .page-content::after{
+        margin-bottom: -120px;
+        content: "";
+        display: block;
+    }
+    .sticky-header-b .sandbox{
+        width: 60px;
+        margin: 0 0 40px;
+        width: 60%;
+        float: left;
+
+    }
+
+    footer, .page-content::after{
+        color: #fff;
+        height: 120px;
+    }
+    footer{
+        background-color: black;
+    }
+</style>
+
+<body class="sticky-header-b">
+    <div class="sandbox">
+        <header class="sticky-header">
+        <h1><small>Day #14</small> Sticky Header <small>Final Version</small></h1>
+    </header>
+    <div class="page-content">
+        <h4>Lorem ipsum dolor sit amet. </h4>
+        <div class="content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde adipisci at harum quas provident hic odio vitae non alias reiciendis sint voluptates saepe soluta cumque quam, exercitationem, sunt ratione! Quo non mollitia cumque numquam magni libero, expedita illo ea fugiat, repudiandae ducimus, quisquam nihil id! Libero omnis sed nam corrupti. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab eos magni dolorum odit quae sint amet! Fugiat, expedita facilis reprehenderit possimus placeat illo dignissimos delectus omnis fugit optio ratione vitae quibusdam inventore ipsam, eaque odit corporis officia sed harum vel nobis corrupti. Nostrum enim hic repellendus? Dolorem natus ipsam, sapiente corrupti temporibus obcaecati dignissimos voluptates eaque nihil, repellendus a quidem error impedit! Enim amet quibusdam accusantium quo iure alias neque ipsa laboriousantium deserunt ducimus quos saepe. Nihil inventore rerum molestias! Eveniet fuga expedita, repudiandae repellendus odio enim culpa, veniam dolor earum omnis sequi perspiciatis minima sapiente, eum neque suscipit accusantium quis ea ipsa quaerat beatae commodi incidunt. Omnis illum praesentium dolorem facilis quia maiores aspernatur dolores ut tempore qui sed, tempora beatae reiciendis asperiores tenetur. Expedita at suscipit, accusamus recusandae dicta sint molestias? Labore, sed nam! Aliquid tenetur neque quo veniam totam ad. Et, perferendis tempore! Eos repudiandae, aspernatur voluptas magnam nesciunt quae odio minus in deleniti sed facilis assumenda id rerum voluptate, ex aperiam dicta tempora ipsam iusto distinctio. Dicta a harum facere veritatis nostrum soluta, dolores doloribus nisi molestiae sequi suscipit dolore odit, dolor, error quisquam saepe unde consequuntur mollitia officiis perferendis vel debitis recusandae non necessitatibus? Laudantium doloribus vitae esse odit ducimus laboriosam ad eos adipisci et quidem cupiditate, impedit repellat eius mollitia nemo est quaerat sunt dolorem commodi. Aperiam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates temporibus illum amet alias. Voluptatem recusandae repudiandae laborum quae dolore deserunt et necessitatibus consequuntur perspiciatis, quod neque eveniet possimus quam tempore ut libero voluptas quia ipsa animi alias? Eius, accusantium cumque vitae rerum facilis impedit illo, natus modi, magni praesentium voluptatibus! Laborum doloremque magni labore, voluptates illum consectetur! Architecto assumenda consequuntur facere illum excepturi accusamus soluta nam cupiditate aperiam, sit, ratione eveniet necessitatibus fuga laudantium iste adipisci similique! Reiciendis obcaecati officia ea in ipsa fuga deserunt facilis laudantium eaque et corporis facere quibusdam culpa ipsam consequuntur voluptates, quia fugit quas saepe aperiam numquam maiores necessitatibus iure quis. Animi sunt, ullam maxime dignissimos illo totam tempora debitis, sed ratione pariatur a voluptatem eveniet quis? Similique earum praesentium, adipisci, tempora quidem nemo obcaecati vitae quos odit repellendus eius veritatis sit aperiam nobis velit placeat sunt quis perspiciatis deserunt soluta repudiandae ipsam! Amet, atque est. Perspiciatis quod placeat veniam tempora laborum commodi eius rem ad ab labore dignissimos culpa, officiis impedit, nostrum possimus obcaecati, debitis fugiat. Inventore minima optio vitae harum aliquam mollitia iure neque eius, repudiandae animi doloribus dolores veritatis nemo voluptatum fuga porro aspernatur, ab, totam facere asperiores odit iste reprehenderit labore enim. Voluptatem et, dolorem quos natus necessitatibus quaerat eveniet similique exercitationem quod iusto iure placeat ab nulla! Atque, sed id saepe minima ut dicta architecto ullam veritatis, quibusdam voluptates enim modi sapiente. Voluptatum magni distinctio sequi at animi reprehenderit veniam totam, iusto magnam aut, tenetur labore et inventore ex? Assumenda itaque sapiente hic dolor obcaecati cum similique ad incidunt animi neque sint alias vitae dolorem officiis praesentium nobis suscipit repellendus, odio voluptatum doloribus! Harum amet ipsa sapiente, animi temporibus voluptate odit fugit perferendis eaque necessitatibus obcaecati maxime eius perspiciatis porro accusamus soluta ratione non beatae ab quaerat? Vero modi maiores expedita iusto error ratione voluptatum, nostrum, deleniti labore dolorem ea beatae laboriosam, iure molestias aliquam earum accusantium necessitatibus ullam consequuntur corrupti omnis ipsa vitae. Unde, necessitatibus nihil? Consequatur soluta, laborum ipsa necessitatibus aliquam dolor, dignissimos voluptates vero distinctio, omnis tempore cumque neque consequuntur blanditiis perspiciatis corrupti ex quos dicta itaque asperiores. In placeat velit dolores voluptatibus, vitae optio modi culpa nisi unde ea at ut necessitatibus, eligendi repellendus sint facere? Dolorem corporis incidunt itaque et necessitatibus perferendis. Consequuntur ipsam cum eligendi nemo quas doloribus laudantium nesciunt culpa asperiores molestiae facilis unde incidunt fugit, aspernatur expedita praesentium vel animi consectetur eius porro. Voluptatum excepturi veniam hic minima labore, atque optio distinctio delectus voluptate repellat quia placeat explicabo nesciunt magni mollitia modi esse consectetur officia! Quis magni asperiores inventore nam neque perspiciatis id, possimus, modi voluptate nesciunt error aut quia officia blanditiis quam quae voluptatem. Ipsam sunt provident debitis sequi eligendi beatae aliquid quibusdam,d</div>
+    </div>
+    <div class="sticky-sidebar">
+        <h4>Sticky sticky-sidebar</h4>
+    </div>
+    </div>
+    
+
+    <footer>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, non?</div>
+    </footer>
+</body>
+
+</html>

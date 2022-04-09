@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning FlexBox</title>
+    <style>
+        /* @mixin flexbox() {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        }
+
+        @mixin flex($values) {
+        -webkit-box-flex: $values;
+        -moz-box-flex:  $values;
+        -webkit-flex:  $values;
+        -ms-flex:  $values;
+        flex:  $values;
+        }
+
+        @mixin order($val) {
+        -webkit-box-ordinal-group: $val;  
+        -moz-box-ordinal-group: $val;     
+        -ms-flex-order: $val;     
+        -webkit-order: $val;  
+        order: $val;
+        }
+
+        .wrapper {
+        @include flexbox();
+        }
+
+        .item {
+        @include flex(1 200px);
+        @include order(2);
+        } */
+
+        body{
+            padding: 2em;
+        }
+
+        .container{
+            display: flex;
+            /* height: 400px; */
+            background: #e0e0e0;
+            flex-flow: row wrap;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        .container div{
+            height: 200px;
+            width: 200px;
+            margin: 2px;
+        }
+
+
+
+        .navigation {
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: flex-end;
+            list-style: none;
+            /* background: #efb676; */
+            /* margin: auto;
+            height: 30px;
+            align-items: center; */
+            margin: 0;
+        }
+        /* .navigation li{
+            margin-left: 30px;
+        } */
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            color: rgb(173, 68, 68);
+        }
+        .navigation a:hover {
+            background: #1565C0;
+        }
+        
+        div{
+            box-sizing: border-box;
+        }
+        .d1{
+            background: red;
+        }
+        .d2{
+            background: blue;
+        }
+        .d3{
+            background: green;
+        }
+        .d4{
+            background: orange;
+        }
+        .d5{
+            background: violet;
+        }
+        .d6{
+            background: brown;
+        }
+        
+        .wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .wrapper > *{
+            padding: 10px;
+            flex: 1 100%;
+        }
+        .header{
+            background: tomato;
+
+        }
+        .footer{
+            background: lightgreen;
+        }
+        .main{
+            text-align: left;
+            background: deepskyblue;
+        }
+        .aside-1{
+            background: hotpink;
+        }
+        .aside-2{
+            background: gold;
+        }
+
+        @media all and (max-width: 880px){
+            .navigation{
+                justify-content: space-around;
+            }
+        }
+        @media all and (max-width: 500px) {
+            .navigation{
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .navigation a{
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid rgba(225, 225, 225, .3);
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+            }
+            .navigation li:last-of-type a{
+                border-bottom: none;
+            }
+        }
+
+
+        @media all and (min-width: 600px){
+            .aside{ flex: 1 0 0;}
+        }
+
+        @media all and (min-width: 800px){
+            .main{flex: 3 0px;}
+            .aside-1{order: 1;}
+            .main{order: 2;}
+            .aside-2{order: 3;}
+            .footer{order: 4;}
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        <div class="container">
+            <div class="d1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugiat soluta quam ducimus voluptates cumque numquam facilis eius nulla explicabo, voluptate nisi velit praesentium sed reiciendis iste nam, quasi laborum.</p>
+            </div>
+            <div class="d2">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit magnam at nemo aliquam nulla fugiat fuga eaque commodi nobis unde. Dolorum suscipit error in at incidunt inventore illum hic eveniet!</p>
+            </div>
+            <div class="d3">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat hic perspiciatis minima ex quis, temporibus eaque quos delectus reiciendis deserunt dignissimos possimus? Vel unde quia facilis error cumque iusto?</p>
+            </div>
+            <div class="d4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugiat soluta quam ducimus voluptates cumque numquam facilis eius nulla explicabo, voluptate nisi velit praesentium sed reiciendis iste nam, quasi laborum.</p>
+            </div>
+            <div class="d5">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit magnam at nemo aliquam nulla fugiat fuga eaque commodi nobis unde. Dolorum suscipit error in at incidunt inventore illum hic eveniet!</p>
+            </div>
+            <div class="d6">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat hic perspiciatis minima ex quis, temporibus eaque quos delectus reiciendis deserunt dignissimos possimus? Vel unde quia facilis error cumque iusto?</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="wrapper">
+            <header class="header">Header</header>
+            <article class="main">
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+            </article>
+            <aside class="aside aside-1">Aside 1</aside>
+            <aside class="aside aside-2">Aside 2</aside>
+            <footer class="footer">Footer</footer>
+          </div>
+    </section>
+</body>
+</html>

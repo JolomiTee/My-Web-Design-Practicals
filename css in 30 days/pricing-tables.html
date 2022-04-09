@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pricing tables</title>
+
+    <style>
+        .pricing-table{
+            margin: 60px auto;
+        }
+        .pricing-table::after{
+            display: table;
+            content: "";
+            clear: both;
+        }
+        .pricing-table > div{
+            display: block;
+            float: left;
+            width: 48%;
+            min-height: 1px;
+            background: rgb(211, 189, 189);
+            color: #000;
+        }
+        .pricing-table > div:not(:last-child){
+            margin-right: 2%;
+
+        }
+        .pricing-block{
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .pricing-header{
+            height: auto;
+            padding: 30px 20px 40px;
+            text-transform: uppercase;
+        }
+        .pricing-header .pricing-heading{
+            font-size: 1.4rem;
+            font-weight: bold;
+
+        }
+        .pricing-price{
+            color: #777;
+        }
+        .pricing-price > span{
+            display: inline-block;
+        }
+        .pricing-currency{
+            margin-top: 10px;
+            vertical-align: top;
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1;
+            opacity: .6;
+
+        }
+        .pricing-value{
+            font-size: 5rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .pricing-duration{
+            margin-top: 10px ;
+            vertical-align: top;
+            font-size: 1.4rem;
+            line-height: 1;
+            opacity: .6;
+        }
+        .pricing-body ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .pricing-body ul li{
+            display: block;
+            padding: 10px 20px;
+            margin: 0;
+        }
+        .pricing-body ul li:nth-child(2n){
+            background-color: #fff;
+
+        }
+        .pricing-body ul li:nth-child(2n + 1){
+            background-color: #f8f8f8;
+        }
+        .pricing-footer{
+            padding: 40px 0 0;
+        }
+        .pricing-button,
+        .pricing-button:visited,
+        .pricing-button:link{
+            display: block;
+            padding: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .popular{
+            margin-top: -20px;
+
+        }
+        .popular > .pricing-header{
+            padding-top: 50px;
+        }
+        .popular .pricing-footer{
+            padding-top: 10px;
+
+        }
+        .popular .pricing-price{
+            color: #ff8888;
+        }
+        .popular .pricing-button{
+            background: #ff8888;
+            color: #fff;
+        }
+        .popular .pricing-button:hover{
+            color: #ff8888;
+            background: #333;
+        }
+        @media screen and (max-width: 1023px) {
+            .pricing-table{
+                margin: auto;
+            }
+            .pricing-table > div{
+                float: none;
+                width: 100%;
+            }
+            .pricing-table > div:not(:last-child){
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .pricing-body{
+                max-width: 100%;
+                overflow: hidden;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .pricing-body ul li{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .pricing-body ul li:not(:first-child){
+                margin-left: -5px;
+            }
+            .pricing-body ul li:nth-child(2n){
+                background-color: #e8e8e8;
+            }
+            .pricing-footer{
+                padding-top: 0;
+            }
+            .popular{
+                margin-top: 0
+            }
+            .popular .pricing-header,
+            .popular .pricing-footer{
+                padding-top: 30px;
+            }
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- <h1>Pricing Table</h1>
+
+    <section>
+        <h3>Basic</h3>
+        <p>$60/month</p>
+        <p>Primary Features
+            Additional Benefits
+            1 Bonus
+        </p>
+        <button><a href="#">Select</a></button>
+    </section>
+    <section>
+        <h3>Awesome</h3>
+        <p>$90/month</p>
+        <p>Primary Features
+            Additional Benefits
+            2 Bonus
+            4 perks
+            24/7 Support
+        </p>
+        <button><a href="#">Select</a></button>
+    </section> -->
+
+    <section>
+        <h4>Pricing Table</h4>
+
+        <div class="pricing-table">
+            <div class="pricing-block">
+                <div class="pricing-header">
+                    <div class="pricing-heading">Basic</div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">60</span>
+                        <span class="pricing-duration">/month</span>                    
+                    </div>
+                </div>
+                <div class="pricing-body">
+                    <ul class="pricing-features">
+                        <li><strong>Primary</strong> Feature</li>
+                        <li><strong>Additional</strong> Benefits</li>
+                        <li><strong>1</strong> Bonus</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="#" class="pricing-button">Select</a>
+                </div>
+            </div>
+
+
+            <div class="pricing-block popular">
+                <div class="pricing-header">
+                    <div class="pricing-heading">Awesome</div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-value">90</span>
+                        <span class="pricing-duration">/month</span>                    
+                    </div>
+                </div>
+                <div class="pricing-body">
+                    <ul class="pricing-features">
+                        <li><strong>Primary</strong> Feature</li>
+                        <li><strong>Additional</strong> Benefits</li>
+                        <li><strong>1</strong> Bonus</li>
+                        <li><strong>4</strong> Perks</li>
+                        <li><strong>24/7</strong> Support</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="#" class="pricing-button">Select</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

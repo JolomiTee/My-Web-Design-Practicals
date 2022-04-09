@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+</head>
+<style>
+    .sandbox{
+        --primary-color: orangered;
+        --secondary-color: hotpink;
+        --base-measurement: 20px;
+
+    }
+    .sandbox .box{
+        text-align: center;
+
+        --text-color: #f3f3f3;
+
+        color: var(--text-color);
+        background: var(--primary-color);
+        margin: var(--base-measurement);
+
+        height: calc(var(--base-measurement) *10);
+        width: calc(var(--base-measurement) *10);
+        line-height: calc(var(--base-measurement) *10);
+    }
+
+    .sandbox .box2{
+        background: var(--secondary-color);
+    }
+</style>
+<body>
+
+    
+    <div class="sandbox">
+        <h4>Example</h4>
+    
+        <div class="box">Box 1</div>
+        <div class="box box2">Box 2</div>
+    </div>
+</body>
+</html>

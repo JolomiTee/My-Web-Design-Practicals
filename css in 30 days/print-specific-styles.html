@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Styles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Niconne&family=Sansita+Swashed&family=Teko:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Niconne&family=Sansita+Swashed&family=Smooch&family=Teko:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 20 auto;
+            padding: 10 auto;
+            font-family: 'Smooch';
+            background: rgb(238,174,202);
+background: linear-gradient(135deg, rgba(238,174,202,1) 0%, rgba(207,29,151,1) 10%, rgba(101,44,117,1) 20%, rgba(68,21,124,1) 30%, rgba(8,68,74,1) 40%, rgba(95,30,96,1) 50%, rgba(124,46,69,1) 60%, rgba(239,197,184,1) 70%, rgba(243,178,243,1) 80%, rgba(176,248,172,1) 90%, rgba(165,205,252,1) 100%);;
+        }
+        h1{
+            text-align: center;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Sansita Swashed', cursive;
+            font-weight:900;
+
+        }
+        footer{
+            position: relative;
+            bottom: 0px;
+            margin-top: 10%;
+            font-family: 'Niconne', cursive;
+        }
+
+
+
+
+
+
+        @media print{
+            /* hide unwanted elements */
+            .course-files{
+
+            }
+            .final-result::before,
+            .info::before,
+            .final-result::after,
+            .info::after,
+            img{
+                display: none;
+            }
+            /* GLOBAL TYPO RESET */
+            body{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 16pt;
+                line-height: 24pt;
+                /* background: none; */
+                color: #000;
+
+            }
+            /* LAYOUT RESET */
+            .final-result,
+            .info, 
+            section,
+            footer{
+                width: 100%;
+                border: none;
+                padding: 0;
+                margin: 0;
+                color: #000;
+            }
+
+            .section:first-child::before{
+                border: none;
+            }
+            /* reset some specifics */
+            h1,h2,h3,h4,h5,h6{
+                color: #000;
+                font-size: 24pt;
+                line-height: 30pt;
+                margin: 0;
+            }
+
+            h1{
+                font-size: 50pt;
+                margin: 0 0 20pt;
+                text-align: center;
+                width: 100%;
+                transform: rotate(0);
+            }
+            h1 small{
+                font-size: 24pt;
+                color: #888;
+                margin: 0 0 10pt;
+                margin-bottom: 20pt;
+            }
+            .info p{
+                color: rgb(134, 25, 25);
+            }
+            .final-result p{
+                color: chartreuse;
+            }
+            a:link{
+                margin: 0;
+                padding: 0;
+            }
+            a::after{
+                content: "[" attr(href) "]";
+            }
+
+            footer a:link,
+            footer a:visited{
+                color: #000;
+                background: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><small>DAY #6 </small> <br>Print Specific Styles</h1>
+
+    <div class="course-files">
+        <!-- <a href="#" class="button-theme">Download the course files here</a> -->
+    </div>
+
+    <div class="final-result">
+        <div class="content">
+            <section>
+                <h4>Instructions</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, soluta? Vitae dolorem labore velit, ut at voluptatibus fugiat dolorum earum numquam similique, quisquam assumenda debitis magnam. Quam repellat sit numquam?</p>
+                <a href="www.kyleexumm.com">Dummy link</a>
+            </section>
+        </div>
+    </div>
+
+    <div class="info">
+        <!-- <h2>Information <small>About this lesson</small></h2> -->
+        <h3>What are we making</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis nihil ea delectus ipsum, facere nesciunt sunt quis veniam ullam omnis doloremque! Corporis eligendi doloribus quas voluptatem! Ad iste totam quas?</p>
+
+        <h3>Where can we do it? </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio qui ex cupiditate corrupti iste voluptates, vero magnam tempore consectetur incidunt!</p>
+
+        <h3>How compatible are these styles with your browser?</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum praesentium recusandae optio, magnam iste exercitationem officiis repellat nostrum quaerat earum ipsum eos itaque rem? Obcaecati unde ratione doloremque mollitia! Quibusdam.</p>
+    </div>
+    <footer>
+        <img src="" alt="">Made By: Jolomi Taiwo <br>
+        CSS in 30 days <br>
+        &amp;2022 Cole Fvckin World
+    </footer>
+
+</body>
+</html>

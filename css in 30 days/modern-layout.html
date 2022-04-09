@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Layout</title>
+</head>
+<style>
+    body{
+        background-color: rgb(157, 219, 154);
+    }
+    code{
+        background-color: orange;
+    }
+    section h1{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    article, header, nav, footer, aside{
+        background-color: rgb(199, 232, 199);
+        margin: 3px;
+        
+    }
+    /* MD1 */
+    .MD1 article{
+        width: 50%;
+        float: left;
+    }
+    .MD1 aside{
+        width: 40%;
+        float:right
+    }
+    .MD1 footer{
+        clear: both;
+    }
+    
+
+    /* MD2 */
+    .MD2 header .logo{
+        width: 20%;
+        float: left;
+        margin: 0;
+    }
+    .MD2 header nav{
+        width: 78%;
+        float: right;
+        margin: 0;
+    }
+    .logo{
+        background-color: aqua;
+    }
+
+    .MD2 header::after{
+        display: table;
+        content: "";
+        clear: both;
+    }
+    .MD2 article{
+        width: 50%;
+        margin-left: 1%;
+        float: left;
+    }
+    .MD2 aside.sidenav{
+        width: 23%;
+        float: left;
+    }
+    .MD2 aside.sidebar{
+        width: 23%;
+        float: right;
+    }
+    .MD2 footer{
+        clear: both;
+    }
+
+    /* MD3 */
+    .MD3 header .logo{
+        width: 20%;
+        float: right;
+        margin: 0;
+    }
+    .MD3 header nav{
+        width: 70%;
+        float: left;
+        margin: 0;
+    }
+    .MD3 header::after{
+        display: table;
+        content: "";
+        clear: both;
+    }
+    .MD3 article{
+        width: 32%;
+        float: left;
+        margin: 0 2% 0 0s;
+    }
+    .MD3 article:last-child{
+        margin: 0;
+    }
+    .MD3 article::after{
+        display: table;
+        content: "";
+        clear: both;
+    }
+    .MD3 footer{
+        clear: both;
+    }
+    /* media query for responsive layouts */
+    @media screen and ( maxwidth : 420px) {
+        .MD1 article, .MD1 aside, .MD2 header .logo, .MD2 header nav, .MD2 article, .MD2 aside.sidebar, .MD2 aside.sidenav, .MD3 article, .MD3 aside aside, .MD3 header .logo, .MD3 header nav{
+            float: none;
+            display: block;
+            width: 100%;
+            margin: 0 0 2%;
+        }
+    }
+</style>
+<body>
+
+<section class="MD1"><h1>Layout 1</h1>
+    <header>
+        <p>This is the Header</p>
+    </header>
+    <article>
+        <p>Lorem ipsum dolor sit, <code>article</code> amet consectetur adipisicing elit. Officiis excepturi magnam et soluta accusantium est odit tempore deserunt incidunt quia ratione, ipsam dolores assumenda praesentium. Voluptas beatae itaque libero expedita.</p>
+    </article>
+    <aside><p>Lorem ipsum dolor sit amet <code>aside</code> consectetur adipisicing elit. Alias deleniti officiis cum consequuntur dolorem, quo neque. Ipsa rerum sapiente fugit!</p>
+        
+    </aside>
+    <footer>
+        <p>Lorem ipsum dolor sit <code>footer</code> amet.</p>
+    </footer>
+</section>
+
+
+
+<section class="MD2"> <h1>Layout 2</h1>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+            </ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </nav>
+    </header>
+    <aside class="sidenav">
+        <p>Lorem ipsum dolor sit <code>aside</code> amet consectetur adipisicing elit. Alias deleniti officiis cum consequuntur dolorem, quo neque. Ipsa rerum sapiente fugit!</p>
+        
+    </aside>
+    <article>
+        <p>Lorem ipsum dolor sit <code>article</code>, amet consectetur adipisicing elit. Officiis excepturi magnam et soluta accusantium est odit tempore deserunt incidunt quia ratione, ipsam dolores assumenda praesentium. Voluptas beatae itaque libero expedita.</p>
+    </article>
+    <aside class="sidebar">
+        <p> Lorem ipsum dolor sit <code>aside</code> amet consectetur adipisicing elit. Alias deleniti officiis cum consequuntur dolorem, quo neque. Ipsa rerum sapiente fugit!</p>
+       
+    </aside>
+    <footer>
+        <p>Lorem ipsum dolor sit <code>footer</code> amet.</p>
+    </footer>
+</section>
+
+
+<section class="MD3"><h1>Layout 3</h1>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+            </ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </nav>
+    </header>
+    <article>
+        <p>Lorem ipsum dolor sit, <code>article</code> amet consectetur adipisicing elit. Officiis excepturi magnam et soluta accusantium est odit tempore deserunt incidunt quia ratione, ipsam dolores assumenda praesentium. Voluptas beatae itaque libero expedita.</p>
+    </article>
+    <article>
+        <p>Lorem ipsum dolor sit, amet <code>article</code> consectetur adipisicing elit. Officiis excepturi magnam et soluta accusantium est odit tempore deserunt incidunt quia ratione, ipsam dolores assumenda praesentium. Voluptas beatae itaque libero expedita.</p>
+    </article>
+    <!-- <article>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis excepturi magnam et soluta accusantium est odit tempore deserunt incidunt quia ratione, ipsam dolores assumenda praesentium. Voluptas beatae itaque libero expedita.</p>
+    </article> -->
+    <aside>
+        <p>Lorem ipsum dolor sit <code>aside</code> amet consectetur adipisicing elit. Alias deleniti officiis cum consequuntur dolorem, quo neque. Ipsa rerum sapiente fugit</p>
+        
+    </aside>
+    <footer>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+</section>
+
+
+<section class="MD4"><h1>Layout 4</h1>
+    <header>
+        <p>This is the Header</p>
+    </header>
+    <article>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis excepturi magnam et soluta accusantium est odit tempore deserunt incidunt quia ratione, ipsam dolores assumenda praesentium. Voluptas beatae itaque libero expedita.</p>
+    </article>
+    <aside>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deleniti officiis cum consequuntur dolorem, quo neque. Ipsa rerum sapiente fugit!</p>
+        
+    </aside>
+    <footer>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+</section>
+
+</body>
+</html>

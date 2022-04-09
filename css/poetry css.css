@@ -1,0 +1,33 @@
+h1, h2, h3 {
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bolder;
+    font-stretch: condensed;
+    font-kerning: auto;
+    text-shadow: 2px 2px 2px blue;
+    text-overflow: ellipsis;
+    text-indent: 30px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: darkgrey;
+    
+}
+body {
+    color: rgba(29, 4, 4, 0.637);
+    background-color: honeydew;
+    font-size: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li {
+    line-height: 2;
+    list-style-image: url('../images/noaabullet.gif');
+}
+th, td {
+    padding: 5px 30px 5px 10px;
+    border-spacing: 0px;
+    font-size: 90%;
+    margin: 0px;
+    text-align: left;
+    background-color: #e0e9f0;
+}
